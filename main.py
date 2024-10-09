@@ -24,10 +24,10 @@ def run_scheduler():
 threading.Thread(target=run_scheduler, daemon=True).start()
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hello! Send me all the items in your to-do list today :)")
+    await update.message.reply_text("Create to-do list and/or reminders for yourself today! \n Type /help for more information!")
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Enter every to-do item you would like to add on a new line, send to-do bot your message and watch the magic happen!\n E.g *Title - Description** \n Walk the dog - At a park \n Study - Page 105 ")
+    await update.message.reply_text("Enter every to-do item/alert you would like to add on a new line and send!\n\n FORMAT FOR TASK \n **Task - Details** \n Study Cells (Science) - Page 105 of textbook \n\n FORMAT FOR ALERT \n Yoga at 19:00 today - at Yoga Studio ")
    
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Custom Command")
