@@ -15,7 +15,6 @@ load_dotenv()  # Load environment variables from .env file
 
 TOKEN = os.getenv('TOKEN')
 BOT_USERNAME = os.getenv('BOT_USERNAME')
-port = 10000;
 
 def run_scheduler():
     while True:
